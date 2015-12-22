@@ -8,14 +8,15 @@ var lapelaApp = angular.module('lapelaApp', [
 
 lapelaApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
     $routeProvider.
-        when('', {
-            templateUrl: 'partials/carousel.html',
+        when('/home', {
+            templateUrl: 'partials/lapela.html',
+            controller: 'lapelaControler'
         }).when('/kontakt', {
             templateUrl: 'partials/kontakt.html',
             controller: 'lapelaControler'
         }).
         otherwise({
-            redirectTo: '/'
+            redirectTo: '/home'
         });
 
 
