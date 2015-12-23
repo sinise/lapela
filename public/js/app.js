@@ -14,6 +14,12 @@ lapelaApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $h
         }).when('/kontakt', {
             templateUrl: 'partials/kontakt.html',
             controller: 'lapelaControler'
+        }).when('/apps', {
+            templateUrl: 'partials/apps.html',
+            controller: 'lapelaControler'
+        }).when('/om', {
+            templateUrl: 'partials/om.html',
+            controller: 'lapelaControler'
         }).
         otherwise({
             redirectTo: '/home'

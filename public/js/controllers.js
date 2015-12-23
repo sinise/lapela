@@ -1,10 +1,7 @@
 var lapelaControllers = angular.module('lapelaControllers', []);
 
 lapelaControllers.controller('laepalController', function ($scope, $http) {
-    $http.get("./getAllBerths")
-        .success(function (response) {
-            $scope.Berths = response;
-        });
+
 });
 
 
