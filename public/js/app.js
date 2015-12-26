@@ -20,6 +20,9 @@ lapelaApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $h
         }).when('/om', {
             templateUrl: 'partials/om.html',
             controller: 'lapelaControler'
+        }).when('/processen', {
+            templateUrl: 'partials/processen.html',
+            controller: 'lapelaControler'
         }).
         otherwise({
             redirectTo: '/home'
