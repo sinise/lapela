@@ -6,9 +6,10 @@ var lapelaApp = angular.module('lapelaApp', [
     'lapelaControllers'
 ]);
 
-lapelaApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
+lapelaApp.config(['$routeProvider', '$httpProvider', '$locationProvider', function($routeProvider, $httpProvider, $locationProvider) {
+    $locationProvider.html5Mode(true).hashPrefix('!');
     $routeProvider.
-        when('/home', {
+        when('/', {
             templateUrl: 'partials/lapela.html',
             controller: 'lapelaControler'
         }).when('/kontakt', {
@@ -25,7 +26,7 @@ lapelaApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $h
             controller: 'lapelaControler'
         }).
         otherwise({
-            redirectTo: '/home'
+            redirectTo: '/'
         });
 
 
